@@ -33,7 +33,7 @@ public class SearchStepDefinitions {
     WebDriver theBrowser;
 
     @Given("I open browser and go to the main page")
-    public void iOpenBrowserAndGoToTheMainPage() {     System.setProperty("webdriver.chrome.silentOutput","true");
+    public void iOpenBrowserAndGoToTheMainPage() {     
         actor.can(BrowseTheWeb.with(theBrowser));
         actor.wasAbleTo(NavigateTo.theAutomationPracticeHomePage());
 
