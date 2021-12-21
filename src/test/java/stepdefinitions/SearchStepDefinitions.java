@@ -33,7 +33,7 @@ public class SearchStepDefinitions {
     WebDriver theBrowser;
 
     @Given("I open browser and go to the main page")
-    public void iOpenBrowserAndGoToTheMainPage() {
+    public void iOpenBrowserAndGoToTheMainPage() {     System.setProperty("webdriver.chrome.silentOutput","true");
         actor.can(BrowseTheWeb.with(theBrowser));
         actor.wasAbleTo(NavigateTo.theAutomationPracticeHomePage());
 
@@ -44,7 +44,7 @@ public class SearchStepDefinitions {
         term = "kaan";
         actor.attemptsTo(LookForProductItem.about(term));
         try {
-            Thread.sleep(30000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -58,7 +58,7 @@ public class SearchStepDefinitions {
         );
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class SearchStepDefinitions {
                         response -> response.statusCode(200))
         );
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -89,7 +89,7 @@ public class SearchStepDefinitions {
                         .contains(resultList.size() +" results have been found.")
         );
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
